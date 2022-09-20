@@ -1,0 +1,49 @@
+:root {
+    --bg-color-primary: rgb(210, 210, 210);
+    --bg-color-secondary: rgb(177, 177, 177);
+    --font-color-primary: rgb(40, 40, 40);
+    --font-color-secondary: rgb(68, 68, 68);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding: 5% 10%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas:
+        'scoreboard scoreboard scoreboard'
+        'results-display results-display results-display'
+        'player-card . task-section';
+    height: 90vh;
+}
+
+#scoreboard {
+    background-color: var(--bg-color-primary);
+    grid-area: scoreboard;
+    height: 10px;
+}
+
+#results-display {
+    background-color: var(--bg-color-secondary);
+    grid-area: results-display;
+    height: 10px;
+}
+
+.player-card {
+    grid-area: 'player-card';
+}
+
+.task-section {
+    grid-area: 'task-section';
+}
+
+
