@@ -12,14 +12,14 @@
 -   `<section class=”portlander-section”>`
 -   `<form id=”add-task-form”>`
 -   `<input name=”name” class="task-input" id="task-name" >`
--   `<input name="icon" class="task-icon" id="task-icon">`
+-   `<select name="icon" class="task-icon" id="task-icon">`
 -   `<button id="add-btn">+</button>`
 -   `<ul id=”task-list”>`
 -   `<button id="remove-button">Remove-Completed-Tasks</button>`
 
 ## HTML: Dynamically Generated Elements:
 
--   `<li kclass=”task-card”>`
+-   `<li class=”task-card”>`
 -   `<span id="task-energy"></span>`
 -   `<img id="task-icon" alt=”task” >`
 -   `<span id="task-name" class=”name” ></span>`

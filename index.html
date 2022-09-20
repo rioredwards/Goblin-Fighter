@@ -24,6 +24,28 @@
     </head>
 
     <body>
-        <main></main>
+        <main>
+            <section class="banner" id="scoreboard"></section>
+            <section class="banner" id="results-display"></section>
+            <section class="player card">
+                <p id="player-energy" class="stat">20</p>
+                <img id="player-image" src="./assets/masc.png" alt="A Hipster" />
+            </section>
+            <section class="”portlander-section”">
+                <form id="”add-task-form”">
+                    <input name="”name”" class="task-input" id="task-name" />
+                    <select name="icon" class="task-icon" id="task-icon"></select>
+                    <button id="add-btn">+</button>
+                </form>
+                <ul id="”task-list”">
+                    <li class="”task-card”">
+                        <span id="task-energy"></span>
+                        <img id="task-icon" alt="”task”" />
+                        <span id="task-name" class="”name”"></span>
+                    </li>
+                </ul>
+                <button id="remove-button">Remove-Completed-Tasks</button>
+            </section>
+        </main>
     </body>
 </html>
