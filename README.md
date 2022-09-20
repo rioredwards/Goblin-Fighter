@@ -131,4 +131,21 @@ const smoke = {
     icon: 'marijuana',
     energy: 2,
 };
+
+const playerMoves = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
+const taskMoves = [0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3];
+const taskTypes = [
+    beer,
+    beer,
+    beer,
+    bicycle,
+    bicycle,
+    bicycle,
+    music,
+    music,
+    movie,
+    movie,
+    tattoo,
+    smoke,
+];
 ```
