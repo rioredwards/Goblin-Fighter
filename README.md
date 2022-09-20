@@ -35,7 +35,7 @@ Additional considerations:
 -   `<img id="player-image">`
 -   `<section class=”portlander-section”>`
 -   `<form id=”add-task-form”>`
--   `<input name=”name” class="task-input" id="task-name" required>`
+-   `<input name=”name” class="task-input" id="task-name" >`
 -   `<input name="icon" class="task-icon" id="task-icon">`
 -   `<button id="add-btn">+</button>`
 -   `<ul id=”task-list”>`
@@ -70,3 +70,65 @@ Additional considerations:
     1. Render and display tasks[] in DOM
 
 ## State Variables:
+
+```js
+let player = {
+    energy: 20,
+    type: 'hero',
+    look: 'masc',
+};
+
+let result = '';
+
+let finished = 0;
+
+let tasks = [
+    {
+        name: 'Smash a Craft Beer',
+        icon: 'beer',
+        energy: 3,
+    },
+    {
+        name: 'Listen to Mac Demarco',
+        icon: 'music',
+        energy: 2,
+    },
+    {
+        name: 'Ride a Fixie',
+        icon: 'bicycle',
+        energy: 4,
+    },
+];
+
+// Default Tasks
+const beer = {
+    name: 'Smash a Craft Beer',
+    icon: 'beer',
+    energy: 3,
+};
+const music = {
+    name: 'Listen to Mac Demarco',
+    icon: 'music',
+    energy: 2,
+};
+const bicycle = {
+    name: 'Ride a Fixie',
+    icon: 'bicycle',
+    energy: 4,
+};
+const movie = {
+    name: 'watch Pulp Fiction',
+    icon: 'movie',
+    energy: 1,
+};
+const tattoo = {
+    name: 'get tatted',
+    icon: 'tattoo',
+    energy: 6,
+};
+const smoke = {
+    name: 'open your mind, man',
+    icon: 'marijuana',
+    energy: 2,
+};
+```
