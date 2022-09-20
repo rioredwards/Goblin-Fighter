@@ -16,3 +16,10 @@
 -   `<button id="add-btn">+</button>`
 -   `<ul id=”task-list”>`
 -   `<button id="remove-button">Remove-Completed-Tasks</button>`
+
+## HTML: Dynamically Generated Elements:
+
+-   `<li kclass=”task-card”>`
+-   `<span id="task-energy"></span>`
+-   `<img id="task-icon" alt=”task” >`
+-   `<span id="task-name" class=”name” ></span>`
