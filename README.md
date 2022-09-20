@@ -43,7 +43,7 @@ Additional considerations:
 
 ## HTML: Dynamically Generated Elements:
 
--   `<li class=”task-card”>`
+-   `<li kclass=”task-card”>`
 -   `<span id="task-energy"></span>`
 -   `<img id="task-icon" alt=”task” >`
 -   `<span id="task-name" class=”name” ></span>`
