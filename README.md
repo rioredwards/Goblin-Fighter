@@ -23,3 +23,12 @@
 -   `<span id="task-energy"></span>`
 -   `<img id="task-icon" alt=”task” >`
 -   `<span id="task-name" class=”name” ></span>`
+
+## HTML: Modified Elements:
+
+-   `scoreboard.textContent`
+-   `resultsDisplay.textContent`
+-   `playerEnergy.textContent`
+-   `taskEnergy.textContent`
+-   `taskIcon.src & taskIcon.alt`
+-   `taskName.textContent`
