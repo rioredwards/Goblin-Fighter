@@ -32,3 +32,15 @@
 -   `taskEnergy.textContent`
 -   `taskIcon.src & taskIcon.alt`
 -   `taskName.textContent`
+
+## Events:
+
+-   `addBtn'
+    1. Create new task object with input from form
+    1. Push new task onto tasks[] array
+    1. Render and display tasks[] in DOM
+-   `rmBtn'
+    1. Create unfinishedTasks[]
+    1. Populate unfinishedTasks[] with only unfinished tasks
+    1. set tasks = unfinishedTasks[]
+    1. Render and display tasks[] in DOM
