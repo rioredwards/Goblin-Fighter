@@ -67,7 +67,7 @@ main {
     text-align: center;
 }
 
-#player-image {
+#player-icon {
     height: 15rem;
 }
 
@@ -135,4 +135,8 @@ main {
 
 #task-energy {
     font-size: 1.6rem;
+}
+
+.black_and_white {
+    filter: grayscale(50%);
 }
