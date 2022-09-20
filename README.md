@@ -25,3 +25,38 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+## HTML: Hardcoded Elements:
+
+-   `<section class="banner" id="scoreboard"></section>`
+-   `<section class="banner" id="results-display"></section>`
+-   `<section class="player card">`
+-   `<p id="player-energy" class="stat">20</p>`
+-   `<img id="player-image">`
+-   `<section class=”portlander-section”>`
+-   `<form id=”add-task-form”>`
+-   `<input name=”name” class="task-input" id="taskName" required>`
+-   `<input name="icon" class="task-icon" id="taskIcon">`
+-   `<button>+</button>`
+-   `<ul id=”task-list”>`
+-   `<button id="remove-button">Remove-Completed-Tasks</button>`
+
+## HTML: Dynamically Generated Elements:
+
+-   `<li class=”task-card”>`
+-   `<span id="task-energy"></span>`
+-   `<img id="task-icon" alt=”task” >`
+-   `<span id="task-name" class=”name” ></span>`
+
+## HTML: Modified Elements:
+
+-   `scoreboard.textContent`
+-   `resultsDisplay.textContent`
+-   `playerEnergy.textContent`
+-   `taskEnergy.textContent`
+-   `taskIcon.src & taskIcon.alt`
+-   `taskName.textContent`
+
+## Events:
+
+## State Variables:
