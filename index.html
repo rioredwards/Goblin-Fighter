@@ -33,9 +33,21 @@
             </section>
             <section class="”portlander-section”">
                 <form id="”add-task-form”">
-                    <input name="”name”" class="task-input" id="task-name" />
-                    <select name="icon" class="task-icon" id="task-icon"></select>
-                    <button id="add-btn">+</button>
+                    <h2>New Task</h2>
+                    <div class="controls">
+                        <label for="task-name">Task Name</label>
+                        <input name="”name”" class="task-input" id="task-name" />
+                        <label for="task-icon-select">Task Icon</label>
+                        <select name="icon" class="task-icon" id="task-icon-select">
+                            <option value="beer">Beer</option>
+                            <option value="music">Music</option>
+                            <option value="bicycle">Bicycle</option>
+                            <option value="movie">Movie</option>
+                            <option value="tattoo">Tattoo</option>
+                            <option value="marijuana">Marijuana</option>
+                        </select>
+                        <button id="add-btn">+</button>
+                    </div>
                 </form>
                 <ul id="”task-list”">
                     <li class="”task-card”">
