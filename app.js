@@ -86,7 +86,6 @@ function displayTasks() {
                 return;
             }
 
-            console.log(`you clicked on ${task.name}!`);
             const playerMove = getRandomItem(playerMoves);
             const taskMove = getRandomItem(taskMoves);
 
@@ -128,19 +127,26 @@ function displayScoreboard() {
 
 addTaskForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = new FormData(addTaskForm);
 
-    const randEnergy = getRandomItem(energies);
-    console.log(randEnergy);
-    const task = {
-        energy: randEnergy,
-        name: formData.get('name'),
-        icon: formData.get('icon'),
-    };
-    tasks.push(task);
+    if (tasks.length < 4) {
+        const formData = new FormData(addTaskForm);
+        const nameEntry = formData.get('name');
+        if (nameEntry !== '') {
+            const randEnergy = getRandomItem(energies);
+            const task = {
+                energy: randEnergy,
+                name: nameEntry,
+                icon: formData.get('icon'),
+            };
+            tasks.push(task);
 
-    result = `You added ${task.name} to the task-list!`;
-
+            result = `You added ${task.name} to the task-list!`;
+        } else {
+            result = `You must add a task name to create a task!`;
+        }
+    } else {
+        result = `Complete more tasks before you add to the list!`;
+    }
     displayResult();
     displayTasks();
 
