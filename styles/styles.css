@@ -1,6 +1,6 @@
 :root {
-    --bg-color-primary: rgb(210, 210, 210);
-    --bg-color-secondary: rgb(177, 177, 177);
+    --bg-color-primary: rgba(210, 210, 210, 80%);
+    --bg-color-secondary: rgba(177, 177, 177, 80%);
     --font-color-primary: rgb(40, 40, 40);
     --font-color-secondary: rgb(68, 68, 68);
 }
@@ -8,12 +8,21 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    z-index: 1;
+}
+
+.bg-image {
+    position: absolute;
+    top: -20rem;
+    width: 100vw;
+    min-height: 100rem;
+    filter: blur(4px);
 }
 
 body {
     margin: 0;
     padding: 0;
-    padding: 2rem 2rem 0;
+    overflow-y: clip;
 }
 
 main {
@@ -102,6 +111,20 @@ main {
 }
 
 input {
+    height: 1.3rem;
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+}
+
+select {
+    height: 1.3rem;
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+}
+
+button {
     height: 1.3rem;
     border-radius: 0.2rem;
     outline: none;
