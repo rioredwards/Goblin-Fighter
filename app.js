@@ -37,7 +37,7 @@ const bicycle = {
     name: 'Ride a Fixie',
     icon: 'bicycle',
 };
-const movie = {
+/* const movie = {
     energy: 1,
     name: 'Watch Pulp Fiction',
     icon: 'movie',
@@ -51,7 +51,7 @@ const smoke = {
     energy: 2,
     name: 'Open your mind, man',
     icon: 'marijuana',
-};
+}; */
 
 let tasks = [beer, bicycle, music];
 const playerMoves = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
