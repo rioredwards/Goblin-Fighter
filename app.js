@@ -17,7 +17,7 @@ let result = '';
 let completed = 0;
 
 let player = {
-    energy: 10,
+    energy: 1,
     type: 'hero',
     look: 'masc',
 };
@@ -66,7 +66,11 @@ function displayTasks() {
         taskList.append(taskEl);
         // Event Listener for doing task
         taskEl.addEventListener('click', () => {
-            if (task.energy < 1) {
+            if (player.energy < 1) {
+                result = `You are asleep! `;
+                displayResult();
+                return;
+            } else if (task.energy < 1) {
                 result = `You already completed this task! `;
                 displayResult();
                 return;
