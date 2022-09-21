@@ -138,5 +138,5 @@ main {
 }
 
 .black_and_white {
-    filter: grayscale(50%);
+    filter: grayscale(100%);
 }

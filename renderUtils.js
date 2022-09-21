@@ -6,8 +6,11 @@ export function renderTask(task) {
     spanTaskEnergy.innerHTML = task.energy;
     const imgTaskIcon = document.createElement('img');
     imgTaskIcon.id = 'task-icon';
-    imgTaskIcon.src = `./assets/${task.icon}.png`;
     imgTaskIcon.alt = task.icon;
+    imgTaskIcon.src = `./assets/${task.icon}.png`;
+    if (task.energy <= 0) {
+        imgTaskIcon.classList.add('black_and_white');
+    }
     const spanTaskName = document.createElement('span');
     spanTaskName.classList.value = 'task-name';
     spanTaskName.id = 'task-name';

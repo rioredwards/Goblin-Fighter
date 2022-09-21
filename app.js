@@ -16,34 +16,34 @@ let player = {
 
 // Default Tasks
 const beer = {
+    energy: 3,
     name: 'Smash a Craft Beer',
     icon: 'beer',
-    energy: 3,
 };
 const music = {
+    energy: 2,
     name: 'Listen to Mac Demarco',
     icon: 'music',
-    energy: 2,
 };
 const bicycle = {
+    energy: 4,
     name: 'Ride a Fixie',
     icon: 'bicycle',
-    energy: 4,
 };
 const movie = {
+    energy: 1,
     name: 'watch Pulp Fiction',
     icon: 'movie',
-    energy: 1,
 };
 const tattoo = {
+    energy: 6,
     name: 'get tatted',
     icon: 'tattoo',
-    energy: 6,
 };
 const smoke = {
+    energy: 2,
     name: 'open your mind, man',
     icon: 'marijuana',
-    energy: 2,
 };
 
 let tasks = [beer, bicycle, music];
