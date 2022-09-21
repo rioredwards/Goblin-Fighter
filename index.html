@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Portland Simulator</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
-
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+    <body>
+        <img class="bg-image" src="./assets/portland.jpg" alt="Portland" />
+        <main>
+            <section class="banner" id="scoreboard"></section>
+            <section class="banner" id="results-display"></section>
+            <section class="player-card">
+                <p id="player-energy" class="stat"></p>
+                <img id="player-icon" src="./assets/masc.png" alt="A Hipster" />
+            </section>
+            <section class="task-section">
+                <form id="add-task-form">
+                    <h2>New Task</h2>
+                    <div class="controls">
+                        <label for="task-icon-select" class="control-label">Task Icon</label>
+                        <select name="icon" class="task-icon" id="task-icon-select">
+                            <option value="beer">Beer</option>
+                            <option value="music">Music</option>
+                            <option value="bicycle">Bicycle</option>
+                            <option value="movie">Movie</option>
+                            <option value="tattoo">Tattoo</option>
+                            <option value="marijuana">Marijuana</option>
+                        </select>
+                        <label for="task-name" class="control-label">Task Name</label>
+                        <input name="name" class="task-input" id="task-name" />
+                        <button id="add-btn">+</button>
+                    </div>
+                </form>
+                <ul id="task-list"></ul>
+                <button id="remove-button">Remove-Completed-Tasks</button>
+            </section>
+        </main>
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/sleeping" title="sleeping icons"
+                >Sleeping icons created by Freepik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/hipster" title="hipster icons"
+                >Hipster icons created by monkik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/weed" title="Weed icons"
+                >Weed icons created by Nikita Golubev - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/tattoo" title="tattoo icons"
+                >Tattoo icons created by Freepik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/movie" title="movie icons"
+                >Movie icons created by Freepik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/music" title="music icons"
+                >Music icons created by Freepik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+                >Beer icons created by Freepik - Flaticon</a
+            >
+            <a href="https://www.flaticon.com/free-icons/bicycle" title="bicycle icons"
+                >Bicycle icons created by Freepik - Flaticon</a
+            >
+        </footer>
+    </body>
 </html>
