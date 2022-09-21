@@ -13,7 +13,7 @@ const addTaskForm = document.getElementById('add-task-form');
 const removeButton = document.getElementById('remove-button');
 
 /* State */
-let result = '';
+let result = 'Click on a task to get started!';
 let completed = 0;
 
 let player = {
@@ -159,3 +159,4 @@ removeButton.addEventListener('click', () => {
 displayPlayer();
 displayTasks();
 displayScoreboard();
+displayResult();

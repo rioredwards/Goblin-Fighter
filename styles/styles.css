@@ -22,7 +22,8 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-y: clip;
+    overflow-x: clip;
+    overflow-y: scroll;
 }
 
 main {
@@ -170,4 +171,18 @@ button {
 
 .black_and_white {
     filter: grayscale(100%);
+}
+
+footer {
+    height: min-content;
+    margin-top: 10rem;
+    padding: 1rem 0;
+    background-color: var(--bg-color-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color-secondary);
+    display: flex;
+    justify-content: center;
 }
