@@ -1,6 +1,6 @@
 /* Imports */
 
-import { getRandomItem, getRandomNumber } from './randomUtils.js';
+import { getRandomItem } from './randomUtils.js';
 import { renderTask } from './renderUtils.js';
 
 /* Get DOM Elements */
