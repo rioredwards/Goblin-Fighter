@@ -10,6 +10,7 @@ const taskList = document.getElementById('task-list');
 const scoreboard = document.getElementById('scoreboard');
 const resultsDisplay = document.getElementById('results-display');
 const addTaskForm = document.getElementById('add-task-form');
+const removeButton = document.getElementById('remove-button');
 
 /* State */
 let result = '';
@@ -151,6 +152,18 @@ addTaskForm.addEventListener('submit', (e) => {
     displayTasks();
 
     addTaskForm.reset();
+});
+
+removeButton.addEventListener('click', () => {
+    const incomplete = [];
+
+    for (const task of tasks) {
+        if (task.energy > 0) {
+            incomplete.push(task);
+        }
+    }
+    tasks = incomplete;
+    displayTasks();
 });
 
 // On page load:
