@@ -84,8 +84,8 @@ function displayTasks() {
         // Event Listener for doing task
         taskEl.addEventListener('click', () => {
             if (task.energy < 1) {
-                // result = `You already completed this task!`;
-                // displayResult();
+                result = `You already completed this task! `;
+                displayResult();
                 return;
             }
 
@@ -96,25 +96,25 @@ function displayTasks() {
             player.energy = Math.max(0, player.energy - taskMove);
             task.energy = Math.max(0, task.energy - playerMove);
 
-            // result = '';
+            result = '';
             if (playerMove === 0) {
-                // result += 'You slacked off.';
+                result += 'You slacked off. ';
             } else {
-                // result += `You did ${task.name}, ${playerMove} times.`;
+                result += `You did ${task.name}, ${playerMove} times. `;
             }
 
             if (taskMove === 0) {
-                // result += `${task.name} was easy and didn't drain any energy.`;
+                result += `${task.name} was easy and didn't drain any energy. `;
             } else {
-                // result += `${task.name} drained your energy by ${taskMove}.`;
+                result += `${task.name} drained your energy by ${taskMove}. `;
             }
 
             if (task.energy < 1) {
-                // completed++;
-                // displayScoreboard();
+                completed++;
+                displayScoreboard();
             }
 
-            // displayResult();
+            displayResult();
             displayPlayer();
             displayTasks();
         });
@@ -129,7 +129,6 @@ function displayScoreboard() {
     scoreboard.textContent = `You have completed ${completed} task(s).`;
 }
 
-// (don't forget to call any display functions you want to run on page load!)
 displayPlayer();
 displayTasks();
 displayScoreboard();
