@@ -16,7 +16,9 @@
     top: -20rem;
     width: 100vw;
     min-height: 100rem;
-    filter: blur(4px);
+    max-height: 150vh;
+    filter: blur(4px) saturate(0.6);
+    object-fit: cover;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
     padding: 0;
     overflow-x: clip;
     overflow-y: scroll;
+    height: 120vh;
 }
 
 main {
