@@ -17,7 +17,7 @@ let result = '';
 let completed = 0;
 
 let player = {
-    energy: 1,
+    energy: 10,
     type: 'hero',
     look: 'masc',
 };
