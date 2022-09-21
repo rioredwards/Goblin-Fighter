@@ -38,21 +38,6 @@ const bicycle = {
     name: 'Ride a Fixie',
     icon: 'bicycle',
 };
-/* const movie = {
-    energy: 1,
-    name: 'Watch Pulp Fiction',
-    icon: 'movie',
-};
-const tattoo = {
-    energy: 6,
-    name: 'Get tatted',
-    icon: 'tattoo',
-};
-const smoke = {
-    energy: 2,
-    name: 'Open your mind, man',
-    icon: 'marijuana',
-}; */
 
 let tasks = [beer, bicycle, music];
 const playerMoves = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
@@ -69,7 +54,7 @@ function displayPlayer() {
         // Player is asleep
         playerEnergyEl.textContent = 0;
         playerIconEl.src = `./assets/sleeping.png`;
-        playerIconEl.classList.toggle('black_and_white');
+        playerIconEl.classList.add('black_and_white');
     }
 }
 

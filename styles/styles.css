@@ -32,7 +32,7 @@ main {
 #results-display {
     background-color: var(--bg-color-primary);
     grid-area: scoreboard;
-    height: 4rem;
+    height: min-content;
     border-radius: 1rem;
     font-size: 1.2rem;
     padding: 1.3rem;
@@ -98,6 +98,14 @@ main {
     justify-items: center;
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    row-gap: 0.5rem;
+}
+
+input {
+    height: 1.3rem;
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
 }
 
 .control-label {
