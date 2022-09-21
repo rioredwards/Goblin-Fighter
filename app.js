@@ -7,8 +7,13 @@ import { renderTask } from './renderUtils.js';
 const playerEnergyEl = document.getElementById('player-energy');
 const playerIconEl = document.getElementById('player-icon');
 const taskList = document.getElementById('task-list');
+const scoreboard = document.getElementById('scoreboard');
+const resultsDisplay = document.getElementById('results-display');
 
 /* State */
+let result = '';
+let completed = 0;
+
 let player = {
     energy: 10,
     type: 'hero',
@@ -116,6 +121,15 @@ function displayTasks() {
     }
 }
 
+function displayResult() {
+    resultsDisplay.textContent = result;
+}
+
+function displayScoreboard() {
+    scoreboard.textContent = `You have completed ${completed} task(s).`;
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayPlayer();
 displayTasks();
+displayScoreboard();
