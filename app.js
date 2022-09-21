@@ -1,6 +1,6 @@
 /* Imports */
 
-import { getRandomItem } from './randomUtils.js';
+import { getRandomItem, getRandomNumber } from './randomUtils.js';
 import { renderTask } from './renderUtils.js';
 
 /* Get DOM Elements */
@@ -9,6 +9,7 @@ const playerIconEl = document.getElementById('player-icon');
 const taskList = document.getElementById('task-list');
 const scoreboard = document.getElementById('scoreboard');
 const resultsDisplay = document.getElementById('results-display');
+const addTaskForm = document.getElementById('add-task-form');
 
 /* State */
 let result = '';
@@ -55,15 +56,11 @@ const smoke = {
 let tasks = [beer, bicycle, music];
 const playerMoves = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
 const taskMoves = [0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3];
-
+const energies = [1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6];
 /* Events */
 
 /* Display Functions */
 function displayPlayer() {
-    updatePlayerEnergy();
-}
-
-function updatePlayerEnergy() {
     if (player.energy > 0) {
         // Player isn't asleep
         playerEnergyEl.textContent = player.energy;
@@ -129,6 +126,28 @@ function displayScoreboard() {
     scoreboard.textContent = `You have completed ${completed} task(s).`;
 }
 
+addTaskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(addTaskForm);
+
+    const randEnergy = getRandomItem(energies);
+    console.log(randEnergy);
+    const task = {
+        energy: randEnergy,
+        name: formData.get('name'),
+        icon: formData.get('icon'),
+    };
+    tasks.push(task);
+
+    result = `You added ${task.name} to the task-list!`;
+
+    displayResult();
+    displayTasks();
+
+    addTaskForm.reset();
+});
+
+// On page load:
 displayPlayer();
 displayTasks();
 displayScoreboard();
