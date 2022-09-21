@@ -1,5 +1,6 @@
 /* Imports */
 
+import { getRandomItem } from './randomUtils.js';
 import { renderTask } from './renderUtils.js';
 
 /* Get DOM Elements */
@@ -32,21 +33,23 @@ const bicycle = {
 };
 const movie = {
     energy: 1,
-    name: 'watch Pulp Fiction',
+    name: 'Watch Pulp Fiction',
     icon: 'movie',
 };
 const tattoo = {
     energy: 6,
-    name: 'get tatted',
+    name: 'Get tatted',
     icon: 'tattoo',
 };
 const smoke = {
     energy: 2,
-    name: 'open your mind, man',
+    name: 'Open your mind, man',
     icon: 'marijuana',
 };
 
 let tasks = [beer, bicycle, music];
+const playerMoves = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5];
+const taskMoves = [0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3];
 
 /* Events */
 
@@ -73,6 +76,43 @@ function displayTasks() {
     for (let task of tasks) {
         const taskEl = renderTask(task);
         taskList.append(taskEl);
+        // Event Listener for doing task
+        taskEl.addEventListener('click', () => {
+            if (task.energy < 1) {
+                // result = `You already completed this task!`;
+                // displayResult();
+                return;
+            }
+
+            console.log(`you clicked on ${task.name}!`);
+            const playerMove = getRandomItem(playerMoves);
+            const taskMove = getRandomItem(taskMoves);
+
+            player.energy = Math.max(0, player.energy - taskMove);
+            task.energy = Math.max(0, task.energy - playerMove);
+
+            // result = '';
+            if (playerMove === 0) {
+                // result += 'You slacked off.';
+            } else {
+                // result += `You did ${task.name}, ${playerMove} times.`;
+            }
+
+            if (taskMove === 0) {
+                // result += `${task.name} was easy and didn't drain any energy.`;
+            } else {
+                // result += `${task.name} drained your energy by ${taskMove}.`;
+            }
+
+            if (task.energy < 1) {
+                // completed++;
+                // displayScoreboard();
+            }
+
+            // displayResult();
+            displayPlayer();
+            displayTasks();
+        });
     }
 }
 
